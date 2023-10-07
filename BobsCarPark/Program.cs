@@ -143,6 +143,7 @@ namespace BobsCarPark
                 Console.WriteLine($"Dispensing £{ChangeDue} change...");
                 while (ChangeDue > 0)
                 {
+                    ChangeDue = Math.Round(ChangeDue, 2);
                     bool Subtracted = false;
                     for (int i = Coins.Length - 1; i >= 0 && !Subtracted; i--)
                     {
